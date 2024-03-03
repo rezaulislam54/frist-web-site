@@ -1,7 +1,35 @@
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+/*navebar-styles*/
+nav ul li {
+  margin-right: 50px;
+  cursor: pointer;
+  color: #ffffff;
+}
+ul li:hover{
+  color: #1dec1d;
+  transition: all 0.4s ease 0s;
+}
+nav ul {
+  display: flex;
+ 
+}
+nav{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  background-color: #7a7674;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+}
+
 section{
     height: 400px;
     padding-bottom: 150px;
@@ -9,9 +37,10 @@ section{
 .top-banner-container{
     background-image: url(images/top-banner.png);
     background-repeat: no-repeat;
+    margin-bottom: 30px;
 }
 h1{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
 }
 .name-highlight{
@@ -19,30 +48,39 @@ h1{
 }
 .a-link{
     background-image: linear-gradient(45deg,rgb(214, 136, 105),#f23211);
-    border: 5px solid red;
     border-radius: 5px;
     color:white;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: 700;
+    display: inline-block;
+    margin-top: 5px;
 }
 .half-width{
     float: left;
     width:40%;
-    margin-left: 5%;
+    margin-left: 6%;
     padding-left: 2%;
 }
 .half-width img{
     width: 100%;
+    padding-top: 5px;
 }
 .dream-area{
     background-image: url(images/dream-bg.png);
     background-repeat: no-repeat;
     background-position: right;
+    margin-bottom: 30px;
 }
 h2{
     font-size: 30px;
     font-weight: 700;
+}
+.experience-heder{
+  text-align: center;
+  font-size: 40px;
+  color: #de523a;
+  padding-bottom: 50px;
 }
 .single-experience{
     box-shadow: 10px 10px 40px grey;
@@ -54,14 +92,110 @@ h2{
     background-image: url(images/exp-bg.png);
     background-repeat: no-repeat;
     background-position: left;
+    margin-bottom: 30px;
 }
 #full-stack{
     border-left: 7px solid;
     border-image: linear-gradient(180deg,lightsalmon,tomato);
     border-image-slice: 1;
+    height: 250px;
 }
 #Junior-dev{
     border-left: 7px solid;
     border-image: linear-gradient(180deg,blue,cyan);
     border-image-slice: 1;
+    height: 250px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1170pxpx;
+  margin: auto;
+  text-align: center;
+}
+.row{
+  display: flex;
+   flex-wrap: wrap;
+ 
+ }
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #24262b;
+    padding: 40px 0;
+}
+.footer-col{
+  width: 25%;
+  padding:0;
+  text-align: left;
+  padding-left: 35px;
+  
+}
+.footer-col h4{
+  font-size: 18px;
+  color: lightblue;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position:relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 60px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
 }
