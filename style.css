@@ -77,7 +77,10 @@ h2{
     font-weight: 700;
 }
 h3{
-  font-size: 20px;
+  font-size: 21px;
+}
+.single-experience> p{
+  font-size: 17px;
 }
 .experience-area{
   background-image: url(images/exp-bg.png);
@@ -249,6 +252,12 @@ ul{
 
   h1{
     font-size: 30px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  h3{
+    font-size: 13px;
   }
   .footer-col{
     width: 100%;
