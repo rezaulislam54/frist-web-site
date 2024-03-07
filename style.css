@@ -3,41 +3,38 @@ body{
   padding: 0;
 }
 /*navebar-styles*/
-nav ul li {
-  margin-right: 50px;
+nav ul li{
+  padding-right: 40px;
   cursor: pointer;
   color: #ffffff;
 }
-ul li:hover{
-  color: #1dec1d;
-  transition: all 0.4s ease 0s;
-}
-nav ul {
-  display: flex;
- 
-}
 nav{
+  display: flex;
   width: 100%;
   height: 70px;
-  display: flex;
-  background-color: #7a7674;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+nav ul {
+  display: flex; 
 }
 nav img{
   width: 150px;
   height: 150px;
-  margin-left: 30px;
+  padding-top: 7px;
 }
-
-section{
-    height: 400px;
-    padding-bottom: 150px;
+ul li:hover{
+  color: red;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
 }
 .top-banner-container{
+    width: 100%;
+    display: flex;
     background-image: url(images/top-banner.png);
     background-repeat: no-repeat;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 h1{
     font-size: 40px;
@@ -57,42 +54,52 @@ h1{
     margin-top: 5px;
 }
 .half-width{
-    float: left;
-    width:40%;
-    margin-left: 6%;
+    width:90%;
+    margin-left: 4%;
     padding-left: 2%;
+}
+.details{
+  padding-top: 40px;
 }
 .half-width img{
     width: 100%;
     padding-top: 5px;
 }
 .dream-area{
+    display: flex;
     background-image: url(images/dream-bg.png);
     background-repeat: no-repeat;
     background-position: right;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 h2{
     font-size: 30px;
     font-weight: 700;
 }
+h3{
+  font-size: 20px;
+}
+.experience-area{
+  background-image: url(images/exp-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-bottom: 50px;
+}
+.experience-style{
+  display: flex;
+  margin-right: 10px;
+}
 .experience-heder{
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: #de523a;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .single-experience{
     box-shadow: 10px 10px 40px grey;
     border-radius: 5px;
     height: 80%;
     background-color: white;
-}
-.experience-area{
-    background-image: url(images/exp-bg.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-bottom: 30px;
 }
 #full-stack{
     border-left: 7px solid;
@@ -116,7 +123,6 @@ body{
   padding:0;
   box-sizing: border-box;
 }
-
 .container{
   max-width: 1170pxpx;
   margin: auto;
@@ -124,8 +130,7 @@ body{
 }
 .row{
   display: flex;
-   flex-wrap: wrap;
- 
+  flex-wrap: wrap;
  }
 ul{
   list-style: none;
@@ -192,10 +197,61 @@ ul{
   color: #24262b;
   background-color: #ffffff;
 }
+/*minimum-width*/
+@media screen and (min-width:576px) and (max-width: 992px) {
+  .experience-area,
+  .experience-style
+    {
+      flex-direction: column;
+      background-image: none;
+      margin: 0;
+    }
+    .single-experience{
+      margin-bottom: 20px;
+    }
+}
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
+@media(max-width: 576px){
+  .nav-container{
     width: 50%;
+  }
+  nav ul li{
+    padding-right: 18px;
+  }
+  nav img{
+    width: 130px;
+    height: 130px;
+    padding-top: 7px;
+  }
+  .top-banner-container,
+  .experience-area,
+  .experience-style
+    {
+      flex-direction: column;
+      background-image: none;
+      margin: 0;
+    }
+    .half-width{
+      margin-bottom: 20px;
+      padding: 0px; 
+    }
+  .dream-area{
+    flex-direction: column-reverse;
+    background-image: none;
+  }
+  .single-experience{
+    margin-left: 25px;
+  }
+  .single-experience>h2, h3, p{
+    padding-left: 4px;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+  .footer-col{
+    width: 100%;
     margin-bottom: 30px;
+  }
 }
